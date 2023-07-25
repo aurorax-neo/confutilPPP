@@ -1,0 +1,3 @@
+logPPP==1.0.3
+PyYAML==6.0.1
+setuptools==67.8.0
