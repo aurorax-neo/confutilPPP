@@ -21,7 +21,7 @@ setup(
     include_package_data=True,
     install_requires=[
         'PyYAML==6.0.1',
-        'logPPP==1.1.1'
+        'logPPP==1.1.2'
     ],
     project_urls={
         'Source': URL,
