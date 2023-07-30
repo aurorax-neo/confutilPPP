@@ -1,7 +1,7 @@
 from .__confutil__ import confutil, LOG_IS_COLOR
 
 __all__ = ['__version__', 'check_config', 'LOG_IS_COLOR']
-__version__ = '1.1.1'
+__version__ = '1.1.2'
 
 
 def check_config(_object=None, _filename='config'):

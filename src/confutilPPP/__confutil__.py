@@ -16,7 +16,7 @@ class confutil:
     def _parse_arguments():
         parser = argparse.ArgumentParser()
         default_config_path = os.path.join(os.getcwd(), 'config.yaml')
-        parser.add_argument("--configpath", "-c", default=default_config_path, nargs=1, help="配置文件")
+        parser.add_argument("--configpath", "-c", default=[default_config_path], nargs=1, help="配置文件")
         return parser.parse_args()
 
     # 检查解析参数
