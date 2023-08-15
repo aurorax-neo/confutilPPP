@@ -3,9 +3,8 @@ import os
 import sys
 from logging import *
 
-__all__ = ['__version__', 'get_logger', 'DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL', 'NOTSET', 'FATAL',
+__all__ = ['get_logger', 'DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL', 'NOTSET', 'FATAL',
            'WARN']
-__version__ = '1.3.0'
 
 
 def get_logger(logging_level=None, logging_is_output_sys_stdout=None,
