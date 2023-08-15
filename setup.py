@@ -20,8 +20,7 @@ setup(
     package_dir={'confutilPPP': 'src/confutilPPP'},
     include_package_data=True,
     install_requires=[
-        'PyYAML==6.0.1',
-        'logPPP==1.1.2'
+        'PyYAML==6.0.1'
     ],
     project_urls={
         'Source': URL,
