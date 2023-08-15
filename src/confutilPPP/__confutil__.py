@@ -3,7 +3,7 @@ import os
 
 import yaml
 
-from .logPPP import logger
+from .__log__ import logger
 
 
 class confutil:
