@@ -1,8 +1,9 @@
 import argparse
+import os
 
 import yaml
 
-from .__log__ import *
+from .logPPP import logger
 
 
 class confutil:
@@ -20,6 +21,7 @@ class confutil:
     # 检查解析参数
     @staticmethod
     def check_config(_object=None, _filename='config'):
+        file_path = os.getcwd()
         try:
             # 解析参数
             config_path = confutil._parse_arguments().configpath[0]
