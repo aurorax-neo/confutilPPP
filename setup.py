@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-from src.confutilPPP import __version__
+from confutilPPP import __version__
 
 URL = 'https://github.com/Aurorax-own/confutilPPP'
 
@@ -17,7 +17,7 @@ setup(
     author='Aurorax-own',
     author_email='15047150695@163.com',
     packages=find_packages('src'),
-    package_dir={'confutilPPP': 'src/confutilPPP'},
+    package_dir={'confutilPPP': 'confutilPPP'},
     include_package_data=True,
     install_requires=[
         'PyYAML==6.0.1'

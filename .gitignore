@@ -240,6 +240,7 @@ cython_debug/
 #.idea/
 
 /venv/
-/src/config.yml
+/config.yml
 /src/**.log
-!/src/confutilPPP/lib/
+!/lib/
+/config.yml
