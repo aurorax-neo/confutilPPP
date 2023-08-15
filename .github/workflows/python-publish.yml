@@ -24,9 +24,11 @@ jobs:
       - name: Build and Publish
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'  # 仅在代码push到master分支时执行
         run: |
+          # Disable Pipenv spinner
+          export PIPENV_NOSPIN=1
           python -m pip install --upgrade pip pipenv
           pipenv shell
-          pipenv sync --keep-outdated
+          pipenv sync
           pip install --upgrade setuptools wheel twine
           python setup.py sdist bdist_wheel
           twine upload dist/*
