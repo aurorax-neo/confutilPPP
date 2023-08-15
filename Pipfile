@@ -1,5 +1,6 @@
 [[source]]
-url = "https://mirrors.aliyun.com/pypi/simple/"
+#url = "https://mirrors.aliyun.com/pypi/simple/"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
 verify_ssl = true
 name = "pip_conf_index_global"
 
