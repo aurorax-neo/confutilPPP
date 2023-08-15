@@ -242,3 +242,4 @@ cython_debug/
 /venv/
 /src/config.yml
 /src/**.log
+!/src/confutilPPP/lib/
