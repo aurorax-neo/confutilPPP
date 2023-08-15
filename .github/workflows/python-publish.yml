@@ -26,7 +26,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip pipenv
           pipenv shell
-          pipenv sync
+          PIPENV_NOSPIN=1 pipenv sync
           pip install --upgrade setuptools wheel twine
           python setup.py sdist bdist_wheel
           twine upload dist/*
