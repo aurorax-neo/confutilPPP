@@ -11,10 +11,6 @@ pip install confutilPPP
 ```
 import confutilPPP
 
-# 此项设置为 False 时，日志不会带颜色（默认为 True）
-confutilPPP.LOG_IS_COLOR = True
-
-
 def test():
     # _object : dict, 包含配置对象
     # _filename : str, 配置文件名 默认为 config

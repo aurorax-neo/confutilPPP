@@ -1,10 +1,9 @@
 import argparse
 import os
 
-import logPPP
 import yaml
 
-LOG_IS_COLOR = True
+from .__log__ import *
 
 
 class confutil:
@@ -37,7 +36,7 @@ class confutil:
                     # 生成新的文件路径
                     config_path = os.path.join(file_path, file_name[:-5] + '.yml')
         except Exception:
-            logPPP.error('构建配置文件路径失败！', is_color=LOG_IS_COLOR)
+            logger.error('构建配置文件路径失败！')
             return None
 
         # 如果文件不存在或者为空，创建文件并写入
@@ -47,14 +46,14 @@ class confutil:
                 with open(config_path, 'w', encoding='utf_8') as f:
                     f.write(yaml.dump(_object, allow_unicode=True, sort_keys=False, default_flow_style=False))
         except Exception as e:
-            logPPP.error('创建配置文件失败！', e, is_color=LOG_IS_COLOR)
+            logger.error('创建配置文件失败！', e)
             return None
 
         # 读取YAML文件
         try:
             with open(config_path, 'r', encoding='utf_8') as f:
-                logPPP.info("配置文件:", config_path, is_color=LOG_IS_COLOR)
+                logger.info(f"配置文件:{config_path}")
                 return yaml.safe_load(f)
         except Exception:
-            logPPP.error("读取配置文件失败,检查配置文件格式是否正确！", is_color=LOG_IS_COLOR)
+            logger.error("读取配置文件失败,检查配置文件格式是否正确！")
             return None
